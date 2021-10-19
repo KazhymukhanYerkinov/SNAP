@@ -1,0 +1,46 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.primary {
+  color: #FFFFFF;
+  background-color: #0066FF;
+}
+.primary:hover {
+  background-color: #0b4294;
+}
+
+.danger {
+  color: #FFFFFF;
+  background-color: #ED2F2F;
+}
+.danger:hover {
+  background-color: #ac1e1e;
+}
+
+.outline {
+  color: #464646;
+  border: 1px solid #464646;
+  background-color: transparent;
+}
+.outline:hover {
+  color: #FFFFFF;
+  background-color: #464646;
+}
+
+.small {
+  font-size: 14px;
+  line-height: 17px;
+  padding: 10px 12px;
+}
+.medium {
+  font-size: 16px;
+  line-height: 19px;
+  padding: 15px 18px;
+}
