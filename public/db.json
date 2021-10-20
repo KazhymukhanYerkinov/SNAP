@@ -12,8 +12,8 @@
         }
       ],
       "password": "qwerty123456",
-      "surname": "Yerkinov",
-      "name": "Kazhymukhanser",
+      "surname": "Yessenyazov",
+      "name": "Almaz",
       "email": "kazhymukhanyerkinov@gmail.com",
       "id": 2,
       "placeWork": "Purrweb",
@@ -40,14 +40,14 @@
       "phone": "+7(708)4171975",
       "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dateMedBook": "07.11.2018"
+      "dateMedBook": "2000-10-24"
     },
     {
       "id": 4,
       "placeWork": "Google",
       "email": "kazhymukhanyerkinov@gmail.com",
-      "name": "Kazhymukhan",
-      "surname": "Yerkinov",
+      "name": "Yersultan",
+      "surname": "Yerkinbek",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
@@ -69,7 +69,7 @@
       "id": 6,
       "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
-      "name": "Kazhymukhan",
+      "name": "Azamat",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
@@ -90,10 +90,10 @@
     },
     {
       "id": 7,
-      "placeWork": "Sergek",
+      "placeWork": "ASPAN",
       "email": "kazhymukhanyerkinov@gmail.com",
-      "name": "Kazhymukhan",
-      "surname": "Yerkinov",
+      "name": "Aidos",
+      "surname": "Meirambek",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
@@ -113,10 +113,10 @@
     },
     {
       "id": 8,
-      "placeWork": "Sergek",
+      "placeWork": "PARK",
       "email": "kazhymukhanyerkinov@gmail.com",
-      "name": "Kazhymukhan",
-      "surname": "Yerkinov",
+      "name": "Dauren",
+      "surname": "Makhashov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
@@ -136,9 +136,9 @@
     },
     {
       "id": 9,
-      "placeWork": "Sergek",
+      "placeWork": "SHYMAS",
       "email": "kazhymukhanyerkinov@gmail.com",
-      "name": "Kazhymukhan",
+      "name": "Guldana",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
@@ -159,10 +159,10 @@
     },
     {
       "id": 10,
-      "placeWork": "Sergek",
+      "placeWork": "POLSHA",
       "email": "kazhymukhanyerkinov@gmail.com",
-      "name": "Kazhymukhan",
-      "surname": "Yerkinov",
+      "name": "Ramazan",
+      "surname": "Amanbek",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
@@ -182,10 +182,10 @@
     },
     {
       "id": 11,
-      "placeWork": "Sergek",
+      "placeWork": "ENG",
       "email": "kazhymukhanyerkinov@gmail.com",
-      "name": "Kazhymukhan",
-      "surname": "Yerkinov",
+      "name": "Merey",
+      "surname": "Abdirazak",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [

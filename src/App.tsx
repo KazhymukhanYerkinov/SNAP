@@ -72,16 +72,19 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <div className='header'>
-        <Button appearance='primary' size='medium' onClick = {activate}> Добавление нового пользователя </Button>
-        <DebounceSearch handleSearch={handleSearch} />
+      <div className = 'content'>
+        <div className = 'title'> Добавление пользователей </div>
+        <div className='header'>
+          <Button appearance='primary' size='medium' onClick = {activate}> Добавление нового пользователя </Button>
+          <DebounceSearch handleSearch={handleSearch} />
+        </div>
+        <Modal user = {user} modal = {modal} deactivateModal = {deactivate}/>
+        <MuiTable
+          users={users}
+          filter={filter}
+          isFetching={isFetching}
+          handleChangePage={handleChangePage} />
       </div>
-      <Modal user = {user} modal = {modal} deactivateModal = {deactivate}/>
-      <MuiTable
-        users={users}
-        filter={filter}
-        isFetching={isFetching}
-        handleChangePage={handleChangePage} />
     </React.Fragment>
   );
 }

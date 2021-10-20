@@ -1,8 +1,18 @@
-
 .header {
-    margin-bottom: 20px;
-    
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+	margin-bottom: 20px;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.content {
+	padding: 20px 40px;
+}
+
+.title {
+	margin-bottom: 20px;
+	font-size: 28px;
+	line-height: 31px;
+	font-weight: 700;
 }

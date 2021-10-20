@@ -28,6 +28,5 @@ export const addUserValidation = Yup.object().shape({
       is: (val: string) => val === 'Yes',
       then: Yup.string().required('Поле, обязательное для заполнения'),
       otherwise: Yup.string().notRequired()
-
     }),
 });

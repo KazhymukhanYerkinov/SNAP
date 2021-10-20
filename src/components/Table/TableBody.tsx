@@ -33,7 +33,7 @@ export const MuiTableBody = ({ users, isFetching }: PropsType): JSX.Element => {
     <TableBody>
 
       {isFetching 
-      ? Array(6).fill(0).map((item, index) => (
+      ? Array(8).fill(0).map((item, index) => (
         <TableRow key = {index}>
           <TableCell colSpan = {10} className = {classes.cell}>
             <Skeleton 
