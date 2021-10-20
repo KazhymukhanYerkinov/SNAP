@@ -2,198 +2,344 @@
   "users": [
     {
       "id": 1,
+      "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan emes",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 2,
+      "placeWork": "Purrweb",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 3,
+      "placeWork": "Choco",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 4,
+      "placeWork": "Google",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 5,
+      "placeWork": "Facebook",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 6,
+      "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 7,
+      "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 8,
+      "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 9,
+      "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 10,
+      "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 11,
+      "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 12,
+      "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Almaz",
       "surname": "Yerkinov",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
     },
     {
       "id": 13,
+      "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
       "surname": "Dosbol",
       "middlename": "Jusipuly",
       "password": "qwerty123456",
       "role": [
-        "Менеджер",
-        "Стажер"
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
       ],
       "phone": "+7(708)4171975",
+      "medBook": "Yes",
       "numberMedBook": 123456789,
-      "dataMedBook": "07.11.2018"
+      "dateMedBook": "07.11.2018"
+    },
+    {
+      "id": 14,
+      "placeWork": "Sergek",
+      "email": "kazhymukhanyerkinov@gmail.com",
+      "name": "Kazhymukhan emes",
+      "surname": "Yerkinov",
+      "middlename": "Jusipuly",
+      "password": "qwerty123456",
+      "role": [
+        {
+          "id": 1,
+          "name": "Менеджер"
+        },
+        {
+          "id": 2,
+          "name": "Стажер"
+        }
+      ],
+      "phone": "+7(708)4171975",
+      "medBook": "Yes",
+      "numberMedBook": 123456789,
+      "dateMedBook": "07.11.2018"
+    },
+    {
+      "placeWork": "Sergek",
+      "email": "dsadasdsa@gmail.com",
+      "name": "Kazhymukhan",
+      "surname": "Yerkinov",
+      "middlename": "Azamat",
+      "password": "dasdsadas",
+      "role": [
+        {
+          "id": 3,
+          "name": "Директор"
+        }
+      ],
+      "phone": "77084171975",
+      "medBook": "Yes",
+      "numberMedBook": "555555555",
+      "dateMedBook": "2000-10-24",
+      "id": 15
     }
   ]
 }

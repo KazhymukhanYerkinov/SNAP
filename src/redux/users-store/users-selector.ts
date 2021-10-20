@@ -1,13 +1,13 @@
-import { UserDisplayType, UserType } from '../../shared/types';
+import { FilterType, UserDisplayType, UserType } from '../../shared/types';
 import { AppStateType } from '../redux-store';
 
-const mapping = (user: UserType): UserDisplayType => {
+const mapping = (user: UserType, index: number, filter: FilterType): UserDisplayType => {
   const object = {
-    id: user.id,
+    id: (filter.currentPage - 1) * 8 + (index + 1),
     name: user.name,
     surname: user.surname,
     middlename: user.middlename,
-    role: user.role.join(', '),
+    role: user.role.map(item => item.name).join(', '),
     phone: user.phone,
     access: 'Имеет',
     position: 'ROLE_ADMIN'
@@ -16,7 +16,7 @@ const mapping = (user: UserType): UserDisplayType => {
 }
 
 export const selectUsers = (state: AppStateType) => {
-  return state.usersStore.users.map(item => mapping(item));
+  return state.usersStore.users.map((item, index) => mapping(item, index, state.usersStore.filter));
 }
 
 export const selectIsFetching = (state: AppStateType) => {

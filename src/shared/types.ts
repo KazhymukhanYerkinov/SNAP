@@ -5,7 +5,7 @@ export type UserType = {
   surname: string;
   middlename: string;
   password: string;
-  role: Array<string>;
+  role: Array<{id: number, name: string}>;
   phone: string;
   numberMedBook: number;
   dataMedBook: string;

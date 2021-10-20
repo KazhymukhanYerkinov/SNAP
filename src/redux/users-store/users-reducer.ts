@@ -73,6 +73,19 @@ export const getUsers = (currentPage: number, term: string): ThunkType => async 
   }
 }
 
+export const createUser = (user: UserType): ThunkType => async (dispatch, getState) => {
+  try {
+    const term = getState().usersStore.filter.term;
+    const totalCount = getState().usersStore.filter.totalCount;
+    const currentPage = getState().usersStore.filter.currentPage;
+    await API.createUser(user, totalCount);
+    dispatch(getUsers(currentPage, term));
+    
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export type InitialStateType = typeof initialState;
 type ActionsType = InferActionsTypes<typeof actions>;
 type ThunkType = BaseThunkType<ActionsType>;
