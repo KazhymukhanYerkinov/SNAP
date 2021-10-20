@@ -1,26 +1,7 @@
 {
   "users": [
     {
-      "medBook": "Yes",
-      "dateMedBook": "2021-10-21",
-      "numberMedBook": "1234567895",
-      "phone": "+7(708)4171975",
-      "role": [
-        {
-          "id": 1,
-          "name": "Менеджер"
-        }
-      ],
-      "password": "qwerty123456",
-      "surname": "Yessenyazov",
-      "name": "Almaz",
-      "email": "kazhymukhanyerkinov@gmail.com",
-      "id": 2,
-      "placeWork": "Purrweb",
-      "middlename": "Jusipuly"
-    },
-    {
-      "id": 3,
+      "id": 1,
       "placeWork": "Choco",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
@@ -43,13 +24,10 @@
       "dateMedBook": "2000-10-24"
     },
     {
-      "id": 4,
-      "placeWork": "Google",
-      "email": "kazhymukhanyerkinov@gmail.com",
-      "name": "Yersultan",
-      "surname": "Yerkinbek",
-      "middlename": "Jusipuly",
-      "password": "qwerty123456",
+      "medBook": "Yes",
+      "dateMedBook": "07.11.2018",
+      "numberMedBook": "123456789",
+      "phone": "+7(708)4171975",
       "role": [
         {
           "id": 1,
@@ -60,13 +38,16 @@
           "name": "Стажер"
         }
       ],
-      "phone": "+7(708)4171975",
-      "medBook": "Yes",
-      "numberMedBook": 123456789,
-      "dateMedBook": "07.11.2018"
+      "password": "qwerty123456",
+      "surname": "Yerkinbek emessss",
+      "name": "Yersultan",
+      "email": "kazhymukhanyerkinov@gmail.com",
+      "id": 2,
+      "placeWork": "Google",
+      "middlename": "Jusipuly"
     },
     {
-      "id": 6,
+      "id": 3,
       "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Azamat",
@@ -89,7 +70,7 @@
       "dateMedBook": "07.11.2018"
     },
     {
-      "id": 7,
+      "id": 4,
       "placeWork": "ASPAN",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Aidos",
@@ -112,7 +93,7 @@
       "dateMedBook": "07.11.2018"
     },
     {
-      "id": 8,
+      "id": 5,
       "placeWork": "PARK",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Dauren",
@@ -135,7 +116,7 @@
       "dateMedBook": "07.11.2018"
     },
     {
-      "id": 9,
+      "id": 6,
       "placeWork": "SHYMAS",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Guldana",
@@ -158,76 +139,7 @@
       "dateMedBook": "07.11.2018"
     },
     {
-      "id": 10,
-      "placeWork": "POLSHA",
-      "email": "kazhymukhanyerkinov@gmail.com",
-      "name": "Ramazan",
-      "surname": "Amanbek",
-      "middlename": "Jusipuly",
-      "password": "qwerty123456",
-      "role": [
-        {
-          "id": 1,
-          "name": "Менеджер"
-        },
-        {
-          "id": 2,
-          "name": "Стажер"
-        }
-      ],
-      "phone": "+7(708)4171975",
-      "medBook": "Yes",
-      "numberMedBook": 123456789,
-      "dateMedBook": "07.11.2018"
-    },
-    {
-      "id": 11,
-      "placeWork": "ENG",
-      "email": "kazhymukhanyerkinov@gmail.com",
-      "name": "Merey",
-      "surname": "Abdirazak",
-      "middlename": "Jusipuly",
-      "password": "qwerty123456",
-      "role": [
-        {
-          "id": 1,
-          "name": "Менеджер"
-        },
-        {
-          "id": 2,
-          "name": "Стажер"
-        }
-      ],
-      "phone": "+7(708)4171975",
-      "medBook": "Yes",
-      "numberMedBook": 123456789,
-      "dateMedBook": "07.11.2018"
-    },
-    {
-      "id": 12,
-      "placeWork": "Sergek",
-      "email": "kazhymukhanyerkinov@gmail.com",
-      "name": "Almaz",
-      "surname": "Yerkinov",
-      "middlename": "Jusipuly",
-      "password": "qwerty123456",
-      "role": [
-        {
-          "id": 1,
-          "name": "Менеджер"
-        },
-        {
-          "id": 2,
-          "name": "Стажер"
-        }
-      ],
-      "phone": "+7(708)4171975",
-      "medBook": "Yes",
-      "numberMedBook": 123456789,
-      "dateMedBook": "07.11.2018"
-    },
-    {
-      "id": 13,
+      "id": 7,
       "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan",
@@ -250,7 +162,7 @@
       "dateMedBook": "07.11.2018"
     },
     {
-      "id": 14,
+      "id": 8,
       "placeWork": "Sergek",
       "email": "kazhymukhanyerkinov@gmail.com",
       "name": "Kazhymukhan emes",
@@ -289,7 +201,49 @@
       "medBook": "Yes",
       "numberMedBook": "555555555",
       "dateMedBook": "2000-10-24",
-      "id": 15
+      "id": 9
+    },
+    {
+      "placeWork": "Google",
+      "email": "kadyrdosbol@gmail.com",
+      "name": "Kadyr",
+      "surname": "Dosbol",
+      "middlename": "Ardakuly",
+      "password": "dasdsadas",
+      "role": [
+        {
+          "id": 3,
+          "name": "Директор"
+        },
+        {
+          "id": 1,
+          "name": "Менеджер"
+        }
+      ],
+      "phone": "77776669988",
+      "medBook": "Yes",
+      "numberMedBook": "88888888888",
+      "dateMedBook": "2000-10-14",
+      "id": 10
+    },
+    {
+      "placeWork": "Facebook",
+      "email": "arman@gmail.com",
+      "name": "Arman",
+      "surname": "Yesbol",
+      "middlename": "Aspan",
+      "password": "dssdsad",
+      "role": [
+        {
+          "id": 3,
+          "name": "Директор"
+        }
+      ],
+      "phone": "77084171975",
+      "medBook": "Yes",
+      "numberMedBook": "59856321455",
+      "dateMedBook": "2000-10-24",
+      "id": 11
     }
   ]
 }
