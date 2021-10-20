@@ -6,16 +6,15 @@ import { FilterType, UserDisplayType } from '../../shared/types';
 
 
 
-type PropsType = {
+interface PropsType {
   users: Array<UserDisplayType>;
   isFetching: boolean;
   filter: FilterType;
-
   handleChangePage: (currentPage: number) => void;
- 
 }
-export const MuiTable = ({ users, isFetching, filter, handleChangePage }: PropsType): JSX.Element => {
 
+
+export const MuiTable = ({ users, isFetching, filter, handleChangePage }: PropsType): JSX.Element => {
   return (
     <TableContainer>
       <Table>

@@ -1,18 +1,29 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 import cn from 'classnames';
+import { useDispatch } from 'react-redux';
 import PhoneInput from 'react-phone-input-2';
-import { TextField, Autocomplete, Select, MenuItem, FormHelperText } from '@mui/material';
-import { Button } from '../index';
-import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm, Controller } from 'react-hook-form';
+
+// @material-ui
 import CloseIcon from '@mui/icons-material/Close';
-import styles from './Modal.module.css';
-import { ModalProps } from './Modal.props';
-import { addUserValidation } from '../../shared/validations';
-import 'react-phone-input-2/lib/style.css'
-import { UserType } from '../../shared/types';
+import { TextField, Autocomplete, Select, MenuItem, FormHelperText } from '@mui/material';
+
+// @components
+import { Button } from '../index';
+
+// @redux
 import { actions, createUser, editUser } from '../../redux/users-store/users-reducer';
+
+// @shared
+import { UserType } from '../../shared/types';
+import { addUserValidation } from '../../shared/validations';
+
+import { ModalProps } from './Modal.props';
+import 'react-phone-input-2/lib/style.css';
+import styles from './Modal.module.css';
+
+
 
 
 const top100Films = [
@@ -36,8 +47,6 @@ const initialValues = {
   dateMedBook: '2000-10-24'
 }
 
-
-
 export const Modal = ({ user, modal, deactivateModal }: ModalProps) => {
 
   const dispatch = useDispatch();
@@ -54,16 +63,19 @@ export const Modal = ({ user, modal, deactivateModal }: ModalProps) => {
     }
   }
 
+
   const close = () => {
     dispatch(actions.setUser(initialValues));
     reset(initialValues);
     deactivateModal();
-    
   }
 
   React.useEffect(() => {
     if (user.name) {
       reset(user);
+      if (user.medBook === 'Yes') {
+        setIsMedBook(true);
+      }
     }
   }, [user]);
   

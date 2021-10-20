@@ -1,15 +1,21 @@
 import React from 'react';
 import * as queryString from 'querystring';
-import { BrowserRouter, Route, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { BrowserRouter, Route, useHistory } from 'react-router-dom';
 
-import { actions, deleteUser, getUser, getUsers } from './redux/users-store/users-reducer';
-import { selectFilter, selectIsFetching, selectUser, selectUsers } from './redux/users-store/users-selector';
+// @components
 import { Button, DebounceSearch, MuiTable, Modal } from './components/index';
-import './index.css';
+
+// @redux
+import { deleteUser, getUser, getUsers } from './redux/users-store/users-reducer';
+import { selectFilter, selectIsFetching, selectUser, selectUsers } from './redux/users-store/users-selector';
+
+// @shared
+import { mapping } from './shared/generator';
 import { QueryType, UserType } from './shared/types';
 import { getQueryParams, updateQuery } from './shared/handleQuery';
-import { mapping } from './shared/generator';
+
+import './index.css';
 
 
 const App = () => {
@@ -62,28 +68,21 @@ const App = () => {
     let query: QueryType = updateQuery(filter);
     history.push({ pathname: '/', search: queryString.stringify(query) })
   }, [filter, history]);
-
-
-
+  
 
   return (
     <React.Fragment>
-
       <div className='header'>
         <Button appearance='primary' size='medium' onClick = {activate}> Добавление нового пользователя </Button>
         <DebounceSearch handleSearch={handleSearch} />
       </div>
-
       <Modal user = {user} modal = {modal} deactivateModal = {deactivate}/>
-
       <MuiTable
         users={users}
         filter={filter}
         isFetching={isFetching}
         handleChangePage={handleChangePage} />
-        
     </React.Fragment>
-
   );
 }
 

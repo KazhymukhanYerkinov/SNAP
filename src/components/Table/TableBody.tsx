@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 
-type PropsType = {
+interface PropsType {
   users: Array<UserDisplayType>;
   isFetching: boolean;
 }

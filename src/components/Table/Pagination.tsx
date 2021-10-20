@@ -12,7 +12,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-type PropsType = {
+interface PropsType {
   filter: FilterType;
   handleChangePage: (currentPage: number) => void; 
 }

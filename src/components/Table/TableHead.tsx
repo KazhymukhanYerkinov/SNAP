@@ -24,7 +24,6 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-
 export const MuiTableHead = (): JSX.Element => {
 
   const classes = useStyles();

@@ -12,8 +12,8 @@ const initialState = {
     totalCount: 0,
     term: '',
   }
-  
 };
+
 
 const usersReducer = (state = initialState, action: ActionsType): InitialStateType => {
   switch (action.type) {
@@ -43,6 +43,8 @@ const usersReducer = (state = initialState, action: ActionsType): InitialStateTy
   }
 }
 
+
+
 export const actions = {
   setUsers: (users: Array<UserType>) => ({
     type: 'users-reducer/SET_USERS', payload: { users }
@@ -58,6 +60,7 @@ export const actions = {
   } as const),
 };
 
+
 const delay = (ms: number) => {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -66,21 +69,16 @@ export const getUsers = (currentPage: number, term: string): ThunkType => async 
   dispatch(actions.setIsFetching(true));
   try {
     const response = await API.getUsers(currentPage, term);
-    await delay(1000);
+    await delay(500);
     if (response.status === ResultCodeEnum.Success) {
       dispatch(actions.setUsers(response.data));
-      dispatch(actions.setFilter({
-        term: term,
-        currentPage: currentPage,
-        totalCount: Number(response.headers['x-total-count'])
-      }));
+      dispatch(actions.setFilter({ term, currentPage, totalCount: Number(response.headers['x-total-count']) }))
     }
-  } catch (error) {
-    console.error(error);
-  } finally {
-    dispatch(actions.setIsFetching(false));
-  }
+  } 
+  catch (error) { console.error(error) } 
+  finally { dispatch(actions.setIsFetching(false)) }
 }
+
 
 export const createUser = (user: UserType): ThunkType => async (dispatch, getState) => {
   try {
@@ -90,9 +88,7 @@ export const createUser = (user: UserType): ThunkType => async (dispatch, getSta
     await API.createUser(user, totalCount);
     dispatch(getUsers(currentPage, term));
     
-  } catch (error) {
-    console.error(error);
-  }
+  } catch (error) { console.error(error) }
 }
 
 export const getUser = (id: number): ThunkType => async (dispatch) => {
@@ -101,18 +97,17 @@ export const getUser = (id: number): ThunkType => async (dispatch) => {
     if (response.status === ResultCodeEnum.Success) {
       dispatch(actions.setUser(response.data));
     }
-  } catch (error) {
-    console.error(error)
-  }
+  } catch (error) {console.error(error) }
 }
 
 export const editUser = (id: number, user: UserType): ThunkType => async (dispatch, getState) => {
   try {
     const term = getState().usersStore.filter.term;
     const currentPage = getState().usersStore.filter.currentPage;
-    await API.editUser(id, user);
-    dispatch(getUsers(currentPage, term));
-
+    const response = await API.editUser(id, user);
+    if (response.status === ResultCodeEnum.Success) {
+      dispatch(getUsers(currentPage, term));
+    }
   } catch (error) { console.error(error) }
 }
 
@@ -120,8 +115,10 @@ export const deleteUser = (id: number): ThunkType => async (dispatch, getState) 
   try {
     const term = getState().usersStore.filter.term;
     const currentPage = getState().usersStore.filter.currentPage;
-    await API.deleteUser(id);
-    dispatch(getUsers(currentPage, term));
+    const response = await API.deleteUser(id);
+    if (response.status === ResultCodeEnum.Success) {
+      dispatch(getUsers(currentPage, term));
+    }
   } catch (error) { console.error(error) }
 }
 

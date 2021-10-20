@@ -2,17 +2,13 @@
   "users": [
     {
       "medBook": "Yes",
-      "dateMedBook": "07.11.2018",
-      "numberMedBook": "123456789",
+      "dateMedBook": "2021-10-21",
+      "numberMedBook": "1234567895",
       "phone": "+7(708)4171975",
       "role": [
         {
           "id": 1,
           "name": "Менеджер"
-        },
-        {
-          "id": 2,
-          "name": "Стажер"
         }
       ],
       "password": "qwerty123456",
