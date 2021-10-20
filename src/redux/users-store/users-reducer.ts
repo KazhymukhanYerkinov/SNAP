@@ -4,6 +4,7 @@ import { BaseThunkType, InferActionsTypes } from '../redux-store';
 
 
 const initialState = {
+  user: {} as UserType,
   users: [] as Array<UserType>,
   isFetching: false,
   filter: {
@@ -22,6 +23,11 @@ const usersReducer = (state = initialState, action: ActionsType): InitialStateTy
         isFetching: action.payload.isFetching
       }
     }
+    case 'users-reducer/SET_USER':
+      return {
+        ...state,
+        user: {...action.payload.user}
+      }
     case 'users-reducer/SET_USERS':
       return {
         ...state,
@@ -40,6 +46,9 @@ const usersReducer = (state = initialState, action: ActionsType): InitialStateTy
 export const actions = {
   setUsers: (users: Array<UserType>) => ({
     type: 'users-reducer/SET_USERS', payload: { users }
+  } as const),
+  setUser: (user: UserType) => ({
+    type: 'users-reducer/SET_USER', payload: { user }
   } as const),
   setIsFetching: (isFetching: boolean) => ({
     type: 'users-reducer/SET_IS_FETCHING', payload: { isFetching }
@@ -82,8 +91,38 @@ export const createUser = (user: UserType): ThunkType => async (dispatch, getSta
     dispatch(getUsers(currentPage, term));
     
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
+}
+
+export const getUser = (id: number): ThunkType => async (dispatch) => {
+  try {
+    const response = await API.getUser(id);
+    if (response.status === ResultCodeEnum.Success) {
+      dispatch(actions.setUser(response.data));
+    }
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+export const editUser = (id: number, user: UserType): ThunkType => async (dispatch, getState) => {
+  try {
+    const term = getState().usersStore.filter.term;
+    const currentPage = getState().usersStore.filter.currentPage;
+    await API.editUser(id, user);
+    dispatch(getUsers(currentPage, term));
+
+  } catch (error) { console.error(error) }
+}
+
+export const deleteUser = (id: number): ThunkType => async (dispatch, getState) => {
+  try {
+    const term = getState().usersStore.filter.term;
+    const currentPage = getState().usersStore.filter.currentPage;
+    await API.deleteUser(id);
+    dispatch(getUsers(currentPage, term));
+  } catch (error) { console.error(error) }
 }
 
 export type InitialStateType = typeof initialState;

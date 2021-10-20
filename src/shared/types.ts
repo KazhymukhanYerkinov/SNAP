@@ -1,5 +1,6 @@
 export type UserType = {
   id: number;
+  placeWork: string;
   email: string;
   name: string;
   surname: string;
@@ -7,8 +8,9 @@ export type UserType = {
   password: string;
   role: Array<{id: number, name: string}>;
   phone: string;
-  numberMedBook: number;
-  dataMedBook: string;
+  medBook: string;
+  numberMedBook: string;
+  dateMedBook: string;
 }
 
 export type UserDisplayType = {
@@ -20,6 +22,8 @@ export type UserDisplayType = {
   phone: string,
   access: string,
   position: string,
+  edit: JSX.Element,
+  delete: JSX.Element,
 }
 
 export type FilterType = {

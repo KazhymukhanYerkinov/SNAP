@@ -3,12 +3,13 @@ import * as queryString from 'querystring';
 import { BrowserRouter, Route, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getUsers } from './redux/users-store/users-reducer';
-import { selectFilter, selectIsFetching, selectUsers } from './redux/users-store/users-selector';
+import { actions, deleteUser, getUser, getUsers } from './redux/users-store/users-reducer';
+import { selectFilter, selectIsFetching, selectUser, selectUsers } from './redux/users-store/users-selector';
 import { Button, DebounceSearch, MuiTable, Modal } from './components/index';
 import './index.css';
-import { QueryType } from './shared/types';
+import { QueryType, UserType } from './shared/types';
 import { getQueryParams, updateQuery } from './shared/handleQuery';
+import { mapping } from './shared/generator';
 
 
 const App = () => {
@@ -16,25 +17,37 @@ const App = () => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const users = useSelector(selectUsers);
-  const isFetching = useSelector(selectIsFetching);
+  const user = useSelector(selectUser);
   const filter = useSelector(selectFilter);
+  const isFetching = useSelector(selectIsFetching);
+  const users = useSelector(selectUsers).map((user: UserType, index: number) => {
+    return mapping(user, index, filter, getDetailUser, deleteDetailUser)
+  });
 
   const [ modal, setModal ] = React.useState(false);
 
-  const handleSearch = (term: string) => {
+  function handleSearch(term: string)  {
     dispatch(getUsers(filter.currentPage, term));
   }
 
-  const handleChangePage = (currentPage: number) => {
+  function handleChangePage(currentPage: number) {
     dispatch(getUsers(currentPage, filter.term));
   }
 
-  const activate = () => {
+  function getDetailUser(id: number) {
+    dispatch(getUser(id));
     setModal(true);
   }
 
-  const deactivate = () => {
+  function deleteDetailUser(id: number) {
+    dispatch(deleteUser(id));
+  }
+
+  function activate() {
+    setModal(true);
+  }
+
+  function deactivate() {
     setModal(false);
   }
 
@@ -52,6 +65,7 @@ const App = () => {
 
 
 
+
   return (
     <React.Fragment>
 
@@ -60,7 +74,7 @@ const App = () => {
         <DebounceSearch handleSearch={handleSearch} />
       </div>
 
-      <Modal modal = {modal} deactivateModal = {deactivate}/>
+      <Modal user = {user} modal = {modal} deactivateModal = {deactivate}/>
 
       <MuiTable
         users={users}

@@ -22,4 +22,13 @@ export const API = {
   createUser(user: UserType, totalCount: number) {
     return instance.post(`/users`, { ...user, id: totalCount + 1, });
   },
+  getUser(id: number): Promise<AxiosResponse<UserType>> {
+    return instance.get(`/users/${id}`);
+  },
+  editUser(id: number, user: UserType) {
+    return instance.put(`/users/${id}`, user);
+  },
+  deleteUser(id: number) {
+    return instance.delete(`/users/${id}`);
+  }
 }

@@ -1,6 +1,5 @@
 import { TableBody, TableRow, TableCell, Skeleton } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { Button } from '../../components/index';
 import { UserDisplayType } from '../../shared/types';
 
 
@@ -49,9 +48,7 @@ export const MuiTableBody = ({ users, isFetching }: PropsType): JSX.Element => {
           <TableRow className = {classes.tableBody} key = {item.id}>
             {Object.keys(item).map((key: string) => (
               <TableCell key = {key}> {item[key]} </TableCell>
-            ))} 
-            <TableCell> <Button appearance = 'primary'> Редактировать </Button> </TableCell>
-            <TableCell> <Button appearance = 'danger'> Закрыть доступ </Button> </TableCell>
+            ))}
           </TableRow>
         ))
       }

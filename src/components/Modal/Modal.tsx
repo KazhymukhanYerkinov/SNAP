@@ -12,7 +12,7 @@ import { ModalProps } from './Modal.props';
 import { addUserValidation } from '../../shared/validations';
 import 'react-phone-input-2/lib/style.css'
 import { UserType } from '../../shared/types';
-import { createUser } from '../../redux/users-store/users-reducer';
+import { actions, createUser, editUser } from '../../redux/users-store/users-reducer';
 
 
 const top100Films = [
@@ -21,18 +21,52 @@ const top100Films = [
   { id: 3, name: 'Директор' },
 ]
 
+const initialValues = {
+  id: 0,
+  placeWork: '',
+  email: '',
+  name: '',
+  surname: '',
+  middlename: '',
+  password: '',
+  role: [],
+  phone: '',
+  medBook: '',
+  numberMedBook: '',
+  dateMedBook: '2000-10-24'
+}
 
 
-export const Modal = ({ modal, deactivateModal }: ModalProps) => {
+
+export const Modal = ({ user, modal, deactivateModal }: ModalProps) => {
 
   const dispatch = useDispatch();
   const [isMedBook, setIsMedBook] = React.useState(false);
-  const { control, handleSubmit } = useForm({ resolver: yupResolver(addUserValidation) });
+  const { control, handleSubmit, reset } = useForm({ resolver: yupResolver(addUserValidation), defaultValues: {...user}, });
 
   const submit = (formData: UserType) => {
-    dispatch(createUser(formData));
+    deactivateModal();
+    if (user.name) {
+      dispatch(editUser(user.id, formData));
+    }
+    else {
+      dispatch(createUser(formData));
+    }
   }
 
+  const close = () => {
+    dispatch(actions.setUser(initialValues));
+    reset(initialValues);
+    deactivateModal();
+    
+  }
+
+  React.useEffect(() => {
+    if (user.name) {
+      reset(user);
+    }
+  }, [user]);
+  
 
   return (
     <div className={cn(styles.modal, { [styles.activate]: modal })}>
@@ -40,7 +74,7 @@ export const Modal = ({ modal, deactivateModal }: ModalProps) => {
 
         <div className={styles.header}>
           <div> Добавление пользователя </div>
-          <CloseIcon onClick={deactivateModal} />
+          <CloseIcon onClick={close} />
         </div>
 
         <form onSubmit={handleSubmit(submit)}>
