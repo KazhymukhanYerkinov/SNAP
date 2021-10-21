@@ -1,7 +1,7 @@
 import { Pagination } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
-import { FilterType } from '../../shared/types';
+import { FilterType } from '@shared/types';
 
 
 const useStyles = makeStyles(() => ({

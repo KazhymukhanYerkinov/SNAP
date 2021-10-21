@@ -2,7 +2,7 @@ import { Table, TableContainer } from '@mui/material';
 import { MuiTableHead } from './TableHead';
 import { MuiTableBody } from './TableBody';
 import { MuiPagination } from './Pagination';
-import { FilterType, UserDisplayType } from '../../shared/types';
+import { FilterType, UserDisplayType } from '@shared/types';
 
 
 

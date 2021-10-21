@@ -1,4 +1,4 @@
-import { Button } from "../components";
+import { Button } from "@components/index";
 import { FilterType, UserDisplayType, UserType } from "./types";
 
 export const mapping = (user: UserType, index: number, filter: FilterType, getUser: (id: number) => void, deleteUser: (id: number) => void): UserDisplayType => {

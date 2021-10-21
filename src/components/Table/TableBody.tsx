@@ -1,6 +1,6 @@
 import { TableBody, TableRow, TableCell, Skeleton } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { UserDisplayType } from '../../shared/types';
+import { UserDisplayType } from '@shared/types';
 
 
 const useStyles = makeStyles(() => ({

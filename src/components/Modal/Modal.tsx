@@ -10,14 +10,14 @@ import CloseIcon from '@mui/icons-material/Close';
 import { TextField, Autocomplete, Select, MenuItem, FormHelperText } from '@mui/material';
 
 // @components
-import { Button } from '../index';
+import { Button } from '@components/index';
 
 // @redux
-import { actions, createUser, editUser } from '../../redux/users-store/users-reducer';
+import { actions, createUser, editUser } from '@redux/users-store/users-reducer';
 
 // @shared
-import { UserType } from '../../shared/types';
-import { addUserValidation } from '../../shared/validations';
+import { UserType } from '@shared/types';
+import { addUserValidation } from '@shared/validations';
 
 import { ModalProps } from './Modal.props';
 import 'react-phone-input-2/lib/style.css';

@@ -1,5 +1,5 @@
 import { API, ResultCodeEnum } from '../../api/api';
-import { FilterType, UserType } from '../../shared/types';
+import { FilterType, UserType } from '@shared/types';
 import { BaseThunkType, InferActionsTypes } from '../redux-store';
 
 
